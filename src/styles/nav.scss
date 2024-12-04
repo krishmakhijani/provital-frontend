@@ -1,5 +1,349 @@
-p{
-    width: 200px;
-    height: 90px;
-    background-color: aqua;
+nav {
+  width: 100%;
+  height: 92px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 61px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  .leftSide {
+    display: flex;
+    align-items: center;
+
+    .logoImage {
+      img {
+        width: 25.441px;
+        height: 25.918px;
+        flex-shrink: 0;
+      }
+    }
+
+    .headerCompanyName {
+      margin-left: 10px;
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 23.828px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -1.787px;
+    }
+  }
+
+  .rightSide {
+    display: flex;
+    align-items: center;
+
+    .rightBox {
+      display: flex;
+      max-width: 706px;
+      width: 100%;
+      height: 44px;
+      padding: 8px 0;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.15);
+
+      .navbarOptions {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+
+        .navItems {
+          color: #707070;
+          text-align: center;
+          font-feature-settings: 'liga' off, 'clig' off;
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 36px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 0 12px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          white-space: nowrap;
+        }
+
+        .dropdowndiv {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 36px;
+
+          button {
+            color: #707070;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 36px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0 12px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 5px;
+            img {
+              width: 10px;
+              height: 6px;
+              gap: 12px;
+            }
+          }
+
+          .dropdownBox {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            width: 214px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #FFF;
+            box-shadow: 0px 3.389px 26.263px 0px rgba(0, 0, 0, 0.12);
+            display: none;
+            z-index: 1000;
+            padding: 16px;
+            box-sizing: border-box;
+
+            .dropdownDoctor, .dropdownPatient {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 4px 0;
+            }
+
+            .dropdownLine {
+              background-color: #EBEBEB;
+              height: 1px;
+              margin: 8px 0;
+            }
+
+            .dropdownDoctorHeading, .dropdownPatientHeading {
+              color: #000;
+              font-family: 'Inter', sans-serif;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            }
+
+            .dropdownDoctorButton, .dropdownPatientButton {
+              display: flex;
+              gap: 8px;
+
+              button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                color: #4384E6;
+                font-family: 'Inter', sans-serif;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: underline;
+                padding: 0;
+              }
+            }
+          }
+
+          &.active .dropdownBox {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 16px;
+
+    .hamburger-button {
+      display: block;
+    }
+
+    .rightSide {
+      display: none;
+    }
+
+    &.mobile-menu-active {
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #FFF;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+
+        .mobile-menu-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 24px;
+
+          .leftSide {
+            display: flex;
+            align-items: center;
+
+            .logoImage {
+              img {
+                width: 25.441px;
+                height: 25.918px;
+                flex-shrink: 0;
+              }
+            }
+
+            .headerCompanyName {
+              margin-left: 10px;
+              color: #000;
+              font-family: 'Inter', sans-serif;
+              font-size: 23.828px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: normal;
+              letter-spacing: -1.787px;
+            }
+          }
+
+          .close-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            fill: #D9D9D9;
+            stroke-width: 2px;
+            stroke: #000;
+            img {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+
+        .mobile-dropdown {
+          width: 325px;
+          height: 102px;
+          flex-shrink: 0;
+          background: #FFF;
+          border-radius: 8px;
+          border: 1px solid #EAEAEA;
+          margin: 0 auto 24px;
+          padding: 16px;
+          box-sizing: border-box;
+
+          .dropdownDoctor, .dropdownPatient {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 4px 0;
+          }
+
+          .dropdownLine {
+            background-color: #EBEBEB;
+            height: 1px;
+            margin: 8px 0;
+          }
+
+          .dropdownDoctorHeading, .dropdownPatientHeading {
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+
+          .dropdownDoctorButton, .dropdownPatientButton {
+            display: flex;
+            gap: 8px;
+
+            button {
+              background: none;
+              border: none;
+              cursor: pointer;
+              color: #4384E6;
+              font-family: 'Inter', sans-serif;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-decoration-line: underline;
+              padding: 0;
+            }
+          }
+        }
+
+        .mobile-nav-items {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+
+          .nav-item-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+
+            button {
+              background: none;
+              border: none;
+              color: #707070;
+              font-family: 'Inter', sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              text-align: left;
+            }
+
+            img {
+              width: 20px;
+              height: 20 px;
+            }
+          }
+
+          .divider {
+            width: 100%;
+            height: 1px;
+            background: #EAEAEA;
+          }
+        }
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
