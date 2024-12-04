@@ -5,6 +5,15 @@ function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    const navItems = [
+        "List your practice",
+        "For Employers",
+        "Courses",
+        "Books",
+        "Speakers",
+        "Doctors"
+    ];
+
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
     };
@@ -31,12 +40,11 @@ function Navbar() {
             <div className="rightSide">
                 <div className="rightBox">
                     <div className="navbarOptions">
-                        <button className="navItems">List your practice</button>
-                        <button className="navItems">For Employers</button>
-                        <button className="navItems">Courses</button>
-                        <button className="navItems">Books</button>
-                        <button className="navItems">Speakers</button>
-                        <button className="navItems">Doctors</button>
+                        {navItems.map((item, index) => (
+                            <button key={index} className="navItems">
+                                {item}
+                            </button>
+                        ))}
                         <div className={`dropdowndiv ${isDropdownOpen ? 'active' : ''}`}>
                             <button onClick={toggleDropdown}>
                                 Login / Signup
@@ -101,35 +109,15 @@ function Navbar() {
                     </div>
 
                     <div className="mobile-nav-items">
-                        <div className="nav-item-wrapper">
-                            <button>List your practice</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
-                        <div className="divider"></div>
-                        <div className="nav-item-wrapper">
-                            <button>For Employers</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
-                        <div className="divider"></div>
-                        <div className="nav-item-wrapper">
-                            <button>Courses</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
-                        <div className="divider"></div>
-                        <div className="nav-item-wrapper">
-                            <button>Books</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
-                        <div className="divider"></div>
-                        <div className="nav-item-wrapper">
-                            <button>Speakers</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
-                        <div className="divider"></div>
-                        <div className="nav-item-wrapper">
-                            <button>Doctors</button>
-                            <img src="../../public/arrow.svg" alt="arrow" />
-                        </div>
+                        {navItems.map((item, index) => (
+                            <div key={index}>
+                                <div className="nav-item-wrapper">
+                                    <button>{item}</button>
+                                    <img src="../../public/arrow.svg" alt="arrow" />
+                                </div>
+                                {index !== navItems.length - 1 && <div className="divider"></div>}
+                            </div>
+                        ))}
                     </div>
                 </div>
             )}
