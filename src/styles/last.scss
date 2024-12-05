@@ -1,0 +1,274 @@
+// last.scss
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.frame-class {
+    width: 100vw;
+    transform: rotate(178.731deg) rotateY(180deg);
+    margin-top: -18px;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    height: 20%;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+div:first-child {
+    position: relative;
+}
+
+.main-sec {
+    position: absolute;
+    z-index: 2;
+    background: #FFF;
+    width: 100vw;
+    top: 700px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+
+    .option-text {
+        color: #707070;
+        font-feature-settings: 'liga' off, 'clig' off;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 133%;
+        letter-spacing: 1.2px;
+        text-align: left;
+        word-spacing: 2px;
+        margin-bottom: 22px;
+        margin-top: 12px;
+    }
+
+    .header-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-main-text {
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-family: Inter;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 133%;
+            color: #707070;
+            word-spacing: 4px;
+
+            .color-header-text {
+                background: linear-gradient(290deg, #F1CA72 27.25%, #D96E6C 92.08%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-right: 8px;
+            }
+
+            .header-text {
+                color: #707070;
+                font-feature-settings: 'liga' off, 'clig' off;
+                font-family: Inter;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 133%;
+            }
+        }
+
+        .header-main-button {
+            display: flex;
+            gap: 16px; /* Space between buttons */
+            align-items: center;
+            padding-right: 40px;
+
+            button {
+                width: 46px;
+                height: 46px;
+                flex-shrink: 0;
+                border-radius: 40px;
+                border: 1px solid #C6C6C6;
+                background: #FFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &.left-arrow img {
+                    width: 24px;
+                    height: 24px;
+                    transform: rotate(-90deg);
+                    flex-shrink: 0;
+                }
+
+                &.right-arrow img {
+                    width: 24px;
+                    height: 24px;
+                    transform: rotate(90deg);
+                    flex-shrink: 0;
+                }
+            }
+        }
+    }
+
+    .main-buttons {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+        flex-wrap: wrap;
+
+        button {
+            display: inline-flex;
+            height: 31px;
+            padding: 5.083px 16.944px;
+            align-items: center;
+            gap: 13px;
+            flex-shrink: 0;
+            border-radius: 25px;
+            border: 0.847px solid #D2D2D2;
+            background: #FFF;
+            color: #707070;
+            text-align: center;
+            font-feature-settings: 'liga' off, 'clig' off;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 133%;
+            cursor: pointer;
+        }
+    }
+
+    .cards-box {
+        display: flex;
+        gap: 24px;
+        margin-top: 32px;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        background: #FFF;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            width: 493px; // Changed back to original width
+            height: 485px;
+            flex-shrink: 0;
+            border-radius: 16px;
+            background: #FFF;
+            box-shadow: 0px 3.389px 26.263px 0px rgba(0, 0, 0, 0.12);
+
+            .card-upper-section {
+                width: 493px;
+                height: 320px;
+                flex-shrink: 0;
+                border-radius: 16px 16px 0px 0px;
+                position: relative;
+
+                .card-image {
+                    width: 493px;
+                    height: 320px;
+                    flex-shrink: 0;
+                    border-radius: 16px 16px 0px 0px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 16px 16px 0px 0px;
+                    }
+                }
+
+                .card-logo {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    width: fit-content; // Adjusts width based on content
+                    height: fit-content; // Adjusts height based on content
+                    min-height: 42px; // Minimum height
+                    flex-shrink: 0;
+                    border-radius: 67px;
+                    background: rgba(255, 255, 255, 0.87);
+                    backdrop-filter: blur(7.5px);
+                    display: flex;
+                    align-items: center;
+                    padding: 0 16px;
+                    gap: 8px;
+
+                    .card-logo-image {
+                        width: 24px;
+                        height: 21px;
+                        flex-shrink: 0;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .card-logo-number {
+                        color: #000;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        white-space: nowrap;
+                    }
+
+                    .card-logo-format {
+                        color: #919191;
+                        font-family: Inter;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            .card-lower-section {
+                height: 165px;
+                text-align: start;
+                padding: 24px;
+
+                .card-name-header {
+                    color: #000;
+                    font-feature-settings: 'liga' off, 'clig' off;
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 133%;
+                    margin-bottom: 8px;
+                }
+
+                .card-name-description {
+                    color: #919191;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
