@@ -57,6 +57,7 @@ function MainSection(){
                     </div>
                 </div>
             </div>
+            
         </div>
     )
 }
