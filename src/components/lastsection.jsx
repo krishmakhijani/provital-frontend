@@ -1,5 +1,5 @@
 // LastSection.jsx
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useCallback } from 'react';
 import "../styles/last.scss";
 
 function LastSection() {
@@ -10,7 +10,7 @@ function LastSection() {
     const gap = 24;
     const scrollAmount = cardWidth + gap;
 
-    const handleScroll = (direction) => {
+    const handleScroll = useCallback((direction) => {
         const container = cardsContainerRef.current;
 
         if (container) {
@@ -34,7 +34,7 @@ function LastSection() {
                 }
             }
         }
-    };
+    }, [scrollAmount]);
 
     const startScrolling = (direction) => {
         setScrollDirection(direction);
