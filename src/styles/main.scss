@@ -188,7 +188,7 @@
                     object-fit: cover;
                 }
 
-                animation: scrollDown 20s linear infinite;
+                animation: scrollUp 20s linear infinite;
             }
 
             .main-section-col-two {
@@ -204,7 +204,7 @@
                     object-fit: cover;
                 }
 
-                animation: scrollUp 20s linear infinite;
+                animation: scrollDown 20s linear infinite;
             }
         }
 
@@ -258,8 +258,7 @@
     .frame-class {
         width: 100vw;
         transform: rotate(178.731deg);
-        margin-top: -10px; // This will move it up
-
+        margin-top: -10px; 
         img {
             width: 100%;
             object-fit: cover;
@@ -267,7 +266,6 @@
     }
 }
 
-// Tablet View (768px to 1024px)
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .main-section {
         padding: 24px;
@@ -359,9 +357,6 @@
 }
 
 
-
-
-// Mobile View
 @media screen and (max-width: 767px) {
     .main-section {
         padding: 16px;

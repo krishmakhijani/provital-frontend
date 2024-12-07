@@ -1,4 +1,3 @@
-// LastSection.jsx
 import { useRef, useEffect, useState, useCallback } from 'react';
 import "../styles/last.scss";
 
@@ -18,18 +17,14 @@ function LastSection() {
 
             if (direction === 'right') {
                 if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
-                    // Wrap the scroll to the start
                     container.scrollTo({ left: 0, behavior: 'smooth' });
                 } else {
-                    // For smooth scrolling effect
                     container.scrollTo({ left: container.scrollLeft + scrollAmount, behavior: 'smooth' });
                 }
             } else if (direction === 'left') {
                 if (container.scrollLeft === 0) {
-                    // Wrap the scroll to the end
                     container.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
                 } else {
-                    // For smooth scrolling effect
                     container.scrollTo({ left: container.scrollLeft - scrollAmount, behavior: 'smooth' });
                 }
             }
