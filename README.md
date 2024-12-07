@@ -1,8 +1,22 @@
-# React + Vite
+# Provital Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview Video
 
-Currently, two official plugins are available:
+[Preview](https://github.com/user-attachments/assets/b4280972-5484-4bef-b67e-8e8856c5dbd7)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
+
+- [React](https://reactjs.org/) - Frontend framework
+- [Vite](https://vitejs.dev/) - Build tool
+- [SASS](https://sass-lang.com/) - CSS preprocessor
+- [ESLint](https://eslint.org/) - Code linting
+
+### Installation
+
+1. Clone the repository :
+    ```git clone https://github.com/krishmakhijani/provital-frontend```
+2. Install Dependencies :
+    ```npm install```
+3. Run the development server :
+    ```npm run dev```
+4. Open the browser and navigate to `http://localhost:5173/`
