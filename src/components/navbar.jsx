@@ -26,7 +26,7 @@ function Navbar() {
         <nav className={isMobileMenuOpen ? 'mobile-menu-active' : ''}>
             <div className="leftSide">
                 <div className="logoImage">
-                    <img src="../../public/logo.svg" alt="Logo" />
+                    <img src="/logo.svg" alt="Logo" />
                 </div>
                 <div className="headerCompanyName">
                     ProVital
@@ -34,7 +34,7 @@ function Navbar() {
             </div>
 
             <button className="hamburger-button" onClick={toggleMobileMenu}>
-                <img src="../../public/hamburger.svg" alt="Menu" />
+                <img src="/hamburger.svg" alt="Menu" />
             </button>
 
             <div className="rightSide">
@@ -49,7 +49,7 @@ function Navbar() {
                             <button onClick={toggleDropdown}>
                                 Login / Signup
                                 <div>
-                                    <img src="../../public/dropdown.svg" alt="Dropdown" />
+                                    <img src="/dropdown.svg" alt="Dropdown" />
                                 </div>
                             </button>
                             <div className="dropdownBox">
@@ -79,14 +79,14 @@ function Navbar() {
                     <div className="mobile-menu-header">
                         <div className="leftSide">
                             <div className="logoImage">
-                                <img src="../../public/logo.svg" alt="Logo" />
+                                <img src="/logo.svg" alt="Logo" />
                             </div>
                             <div className="headerCompanyName">
                                 ProVital
                             </div>
                         </div>
                         <button className="close-button" onClick={toggleMobileMenu}>
-                            <img src="../../public/cancel_hamburger.svg" alt="Close" />
+                            <img src="/cancel_hamburger.svg" alt="Close" />
                         </button>
                     </div>
 
@@ -113,7 +113,7 @@ function Navbar() {
                             <div key={index}>
                                 <div className="nav-item-wrapper">
                                     <button>{item}</button>
-                                    <img src="../../public/arrow.svg" alt="arrow" />
+                                    <img src="/arrow.svg" alt="arrow" />
                                 </div>
                                 {index !== navItems.length - 1 && <div className="divider"></div>}
                             </div>

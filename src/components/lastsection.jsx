@@ -59,48 +59,48 @@ function LastSection() {
 
     const cardsData = [
         {
-            image: "../../public/card1.png",
-            logo: "../../public/card1_logo.svg",
+            image: "/card1.png",
+            logo: "/card1_logo.svg",
             logoNumber: "121/80",
             logoFormat: "mmHg",
             title: "Nutrition",
             description: "Evidence supports the use of a whole food, plant-predominant diet to prevent, treat and reverse chronic illness."
         },
         {
-            image: "../../public/card2.png",
-            logo: "../../public/card2_logo.svg",
+            image: "/card2.png",
+            logo: "/card2_logo.svg",
             logoNumber: "32",
             logoFormat: "minutes",
             title: "Physical activity",
             description: "Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease."
         },
         {
-            image: "../../public/card3.png",
-            logo: "../../public/card3_logo.svg",
+            image: "/card3.png",
+            logo: "/card3_logo.svg",
             logoNumber: "8",
             logoFormat: "hours",
             title: "Restorative sleep",
             description: "Consistent, quality sleep is essential for cognitive function and physical health."
         },
         {
-            image: "../../public/card4.png",
-            logo: "../../public/card4_logo.svg",
+            image: "/card4.png",
+            logo: "/card4_logo.svg",
             logoNumber: "60",
             logoFormat: "bpm",
             title: "Stress management",
             description: "Effective stress management techniques are crucial for mental well-being and overall health."
         },
         {
-            image: "../../public/card5.png",
-            logo: "../../public/card5_logo.svg",
+            image: "/card5.png",
+            logo: "/card5_logo.svg",
             logoNumber: "Feeling",
             logoFormat: "better",
             title: "Social connection",
             description: "Strong social connections are associated with a lower risk of many chronic diseases and enhanced mental health."
         },
         {
-            image: "../../public/card6.png",
-            logo: "../../public/card6_logo.svg",
+            image: "/card6.png",
+            logo: "/card6_logo.svg",
             logoNumber: "62",
             logoFormat: "days",
             title: "Substance abuse",
@@ -111,7 +111,7 @@ function LastSection() {
     return (
         <div>
             <div className="frame-class">
-                <img src="../../public/frame.png" alt="frame"/>
+                <img src="/frame.png" alt="frame"/>
             </div>
             <div className="main-sec">
                 <div className="option-text">
@@ -130,7 +130,7 @@ function LastSection() {
                             onMouseLeave={stopScrolling}
                             onClick={() => handleScroll('left')}
                         >
-                            <img src="../../public/left_arrow.svg" alt="Left Arrow"/>
+                            <img src="/left_arrow.svg" alt="Left Arrow"/>
                         </button>
                         <button
                             className="arrow-right"
@@ -139,7 +139,7 @@ function LastSection() {
                             onMouseLeave={stopScrolling}
                             onClick={() => handleScroll('right')}
                         >
-                            <img src="../../public/right_arrow.svg" alt="Right Arrow"/>
+                            <img src="/right_arrow.svg" alt="Right Arrow"/>
                         </button>
                     </div>
                 </div>
